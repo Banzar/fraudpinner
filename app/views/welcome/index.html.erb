@@ -1,0 +1,37 @@
+<html>
+	<body>
+		<div class='header'>
+			<h1>Keurig Fraud Caller Database</h1>
+		</div>
+		<div class='content'>
+			<p>Any emails that you get that have @hush.com in them are transfered to Keurig CCCG.</p>
+			<%= form_tag home_path, :method => "get" do %>
+				<p>
+					<%= text_field_tag :search, params[:search] %>
+					<%= submit_tag "Search", :name => nil %>
+				</p>
+			<% end %>
+		</div>
+			<% if params[:search] %>
+				<% if @offenders.count == 0 %>
+					<h1>This information is safe</h1>
+				<% else %>
+					<h1>Transfer To CCCG</h1>
+				<% end %>
+				<% unless @offenders.count == 0 %>
+					<% for offender in @offenders do %>
+						<ul>
+							<li>
+								<%= offender.name %><br>
+								<%= offender.email %><br>
+								<%= offender.phone_number %><br>
+								<%= offender.serial_number %><br>
+								<%= offender.address %>
+							</li>
+						</ul>
+					<% end %>
+				<% end %>
+			<% end %>
+	</body>
+</html>
+

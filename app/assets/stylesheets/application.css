@@ -1,0 +1,21 @@
+/*CSS Doc*/
+
+body {
+	margin: 0;
+	padding: 0;
+	font-family: "Lucida Grande", sans-serif;
+	font-size: small;
+	color: #38230E;
+	background-color: #BBEEDD;
+}
+
+
+.header {
+	height: 80px;
+	width: 100%;
+	text-align: center;
+}
+
+.content {
+	text-align: center;
+}

@@ -1,0 +1,26 @@
+<h1>Add Fraud Suspect</h1>
+<%= form_for @offender do |f| -%>
+	<p>
+		<%= f.label :name %><br>
+		<%= f.text_field :name %>
+	</p>
+	<p>
+		<%= f.label :email %><br>
+		<%= f.text_field :email %>
+	</p>
+	<p>
+		<%= f.label :phone_number %><br>
+		<%= f.text_field :phone_number %>
+	</p>
+	<p>
+		<%= f.label :serial_number %><br>
+		<%= f.text_field :serial_number %>
+	</p>
+	<p>
+		<%= f.label :address %><br>
+		<%= f.text_area :address %>
+	</p>
+	<p>
+		<%= f.submit "Add" %>
+	</p>
+<% end %>
